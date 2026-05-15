@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Compact";
+  src: url("./assets/fonts/unicode.compacta.ttf") format(truetype);
+}
+@font-face {
+  font-family: "gilroy";
+  src: url("./assets/fonts/Gilroy-Light.otf");
+}
+
+@theme {
+  --font-compact:"Compact",sans-serif;
+  --font-gilroy:"gilroy",sans-serif;
+}
+
+body{
+  font-family: "gilroy";
+}
