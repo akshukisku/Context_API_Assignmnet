@@ -5,7 +5,7 @@ import Footer from '../Footer';
 
 const HomeWrapper = () => {
   return (
-    <div className="w-full">
+    <div className="w-full bg-zinc-950">
     <Navbar/>
     <Outlet/>
     <Footer/>

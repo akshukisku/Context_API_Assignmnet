@@ -1,7 +1,7 @@
 import { useReducer, type ReactNode } from "react";
 import CartContext from "./CartContext";
 import { cartInitialData, cartReducer } from "../../reducer/cart.reducer";
-import type { AddableProduct,} from "../../typescript/interface/cart.interface"; 
+import type { AddableProduct,  } from "../../typescript/interface/cart.interface"; 
 
 const CartProvider = ({ children }: { children: ReactNode }) => {
   const [cartsData, dispatchCart] = useReducer(cartReducer, cartInitialData);
@@ -12,7 +12,7 @@ const addItem = (item: AddableProduct) => {
     type: "ADD_ITEM",
     payload: {
       ...item,
-      price: Number(item.price),    // 👈 sanitize once here
+      price: Number(item.price),
     },
   });
 };
