@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <header className="w-full bg-zinc-950 px-4 py-4 sm:px-6 lg:px-10">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4">
+      <nav className=" flex  items-center justify-between gap-4">
         <ul className="hidden md:flex flex-wrap items-center gap-2 lg:gap-3">
           {navLeftItems.map((it) => (
             <li key={it.label}>
