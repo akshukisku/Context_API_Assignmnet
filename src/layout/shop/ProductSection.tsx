@@ -17,7 +17,7 @@ const categories = [
 const ProductSection = () => {
   const proctContext = useContext(ProductContext);
 
-  const cartContext = useContext(CartContext)
+  const cartContext = useContext(CartContext);
   if (!proctContext) {
     throw new Error("Product context is not defined");
   }
@@ -27,7 +27,7 @@ const ProductSection = () => {
     proctContext.fetchProductList();
   }, []);
 
-  console.log("cartItem",cartContext?.cartsData)
+  console.log("cartItem", cartContext?.cartsData);
 
   return (
     <section className="min-h-screen bg-zinc-950 text-white px-4 py-6 md:px-8 lg:px-10">
@@ -74,13 +74,22 @@ const ProductSection = () => {
                   {/* Bottom Icons */}
                   <div className="absolute bottom-5 right-5 flex items-center gap-3">
                     {/* Heart */}
-                    <button className="flex h-14 w-14 items-center justify-center rounded-full bg-black text-white cursor-pointer">
-                      <Heart size={24} fill="white" />
+                    <button className="flex h-14 w-14 items-center justify-center rounded-full bg-black text-white cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-white hover:text-black hover:shadow-[0_0_20px_rgba(255,255,255,0.4)]">
+                      <Heart
+                        size={24}
+                        className="transition-all duration-300 hover:fill-black"
+                      />
                     </button>
 
                     {/* Lock */}
-                    <button className="flex h-14 w-14 items-center justify-center rounded-full bg-black text-white cursor-pointer" onClick={()=>cartContext?.addItem(product)}>
-                      <Lock size={22} />
+                    <button
+                      className="flex h-14 w-14 items-center justify-center rounded-full bg-black text-white cursor-pointer transition-all duration-300 hover:scale-110 hover:bg-red-700 hover:shadow-[0_0_20px_rgba(255,0,0,0.5)]"
+                      onClick={() => cartContext?.addItem(product)}
+                    >
+                      <Lock
+                        size={22}
+                        className="transition-all duration-300"
+                      />
                     </button>
                   </div>
                 </div>

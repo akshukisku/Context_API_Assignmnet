@@ -4,6 +4,7 @@ import Homepage from "../pages/Homepage";
 import Shop from "../pages/Shop";
 import Cart from "../pages/Cart";
 import Profile from "../pages/Profile";
+import NotFound from "../components/NotFound";
 
 const Routes = createBrowserRouter([
   {
@@ -28,6 +29,11 @@ const Routes = createBrowserRouter([
       }
     ],
   },
+  {
+    path:"*",
+    element:<NotFound/>
+
+  }
 ]);
 
 export default Routes;
